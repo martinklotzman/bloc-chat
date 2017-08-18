@@ -1,0 +1,15 @@
+html,body { height:100%; }
+
+.sidebar {
+    background-color: lightgray;
+    padding: 20px;
+    float: left;
+    height: 100%;
+    width: 25%;
+}
+
+.messages {
+
+    background-color: yellow;
+
+}
