@@ -1,15 +1,27 @@
 (function() {
     function ModalCtrl(Room, $uibModalInstance) {
-        var modal = this;
+      var $ctrl = this;
+      $ctrl.items = items;
+      $ctrl.selected = {
+      item: $ctrl.items[0]
+      };
 
-        modal.newRoom = function() {
+      $ctrl.ok = function () {
+      $uibModalInstance.close($ctrl.selected.item);
+      };
+
+      $ctrl.cancel = function () {
+      $uibModalInstance.dismiss('cancel');
+      };
+
+        /*modal.newRoom = function() {
 
           $uibModalInstance.close()
         };
 
         modal.cancel = function() {
           $uibModalInstance.dismiss('cancel');
-        };
+        };*/
     }
 
     angular
