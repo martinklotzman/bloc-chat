@@ -2,14 +2,36 @@ html,body { height:100%; }
 
 .sidebar {
     background-color: lightgray;
-    float: left;
     padding: 20px;
     height: 100%;
     width: 30%;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    z-index: 1;
+}
+
+.sidebar-header {
+  padding-left: 10px;
+  margin-bottom: 5px;
+  display: table;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.sidebar-title {
+  display: inline-block;
+  padding-right: 15px;
+
 }
 
 .btn .btn-primary {
-    position: relative;
+    margin-bottom: 10px;
+
+}
+
+.room-name {
+    padding-left: 10px;
 
 }
 

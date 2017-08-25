@@ -3,7 +3,7 @@
         var modal= this;
 
         modal.createRoom = function() {
-          Room.add(modal.input);
+          Room.add(modal.name);
           $uibModalInstance.close()
         };
 

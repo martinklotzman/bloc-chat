@@ -4,7 +4,7 @@
         home.rooms = Room.all;
 
         home.addRoom = function() {
-            console.log("test");
+            console.log("opened");
             $uibModal.open({
                 templateUrl: '/templates/modal.html',
                 size: 'sm',
