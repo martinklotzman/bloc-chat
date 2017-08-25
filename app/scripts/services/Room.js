@@ -7,7 +7,7 @@
         Room.all = rooms;
 
         Room.add = function(room) {
-            rooms.$add("MyRoom").then(function(ref) {
+            rooms.$add(room).then(function(ref) {
                 var id = ref.key;
                 console.log(id);
                 rooms.$indexFor(id);
