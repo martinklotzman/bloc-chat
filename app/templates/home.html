@@ -4,12 +4,12 @@
         <button type="button" class="btn btn-primary" ng-click="home.addRoom()">Create Room</button>
     </div>
     <div class="sidebar-chatroom" ng-repeat="room in home.rooms">
-        <p class="room-name">{{ room.$value }}</p>
+        <p class="room-name" ng-click="home.selectRoom(room)">{{ room.$value }}</p>
     </div>
 </div>
 <div class="messages">
     <div class="messages-header">
-        <h3>Current Room</h3>
+        <h3> {{ home.currentRoom }} </h3>
     </div>
     <div class="messages-body">
       <div class="username"><p>username</p></div>

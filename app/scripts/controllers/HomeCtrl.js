@@ -2,6 +2,7 @@
     function HomeCtrl(Room, $uibModal) {
         var home = this;
         home.rooms = Room.all;
+        home.currentRoom = "test";
 
         home.addRoom = function() {
             console.log("opened");
@@ -12,6 +13,11 @@
                 controllerAs: 'modal'
             });
         }
+
+        home.selectRoom = function(room) {
+            console.log("selected");
+            home.currentRoom = room.$value;
+      }
     }
 
     angular

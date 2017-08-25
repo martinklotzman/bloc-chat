@@ -51,11 +51,11 @@ html,body { height:100%; }
 /* Messages */
 
 .messages {
-    background-color: yellow;
+    background-color: white;
     position: fixed;
     padding: 10px;
     top: 0px;
-    left: 30%;
+    left: 35%;
     width: 70%;
     height: 100%;
     z-index: 1;
