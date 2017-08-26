@@ -2,7 +2,7 @@
     function HomeCtrl(Room, $uibModal) {
         var home = this;
         home.rooms = Room.all;
-        home.currentRoom = "test";
+        home.currentRoom = null;
 
         home.addRoom = function() {
             console.log("opened");
