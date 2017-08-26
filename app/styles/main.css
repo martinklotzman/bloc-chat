@@ -38,7 +38,7 @@ html,body { height:100%; }
     font-weight: bold;
 }
 
-.btn .btn-primary {
+.btn.btn-primary {
     margin-bottom: 10px;
 
 }

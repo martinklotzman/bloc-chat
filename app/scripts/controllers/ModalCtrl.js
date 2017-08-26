@@ -8,7 +8,7 @@
         };
 
         modal.cancel = function() {
-          $uibModalInstance.dismiss();
+          $uibModalInstance.close();
         };
     }
 
