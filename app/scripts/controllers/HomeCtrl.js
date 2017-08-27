@@ -3,6 +3,7 @@
         var home = this;
         home.rooms = Room.all;
         home.currentRoom = null;
+        home.messages = Message.all;
 
         home.addRoom = function() {
             console.log("opened");
@@ -19,9 +20,9 @@
             home.currentRoom = room.$value;
       }
 
-        home.getMessageInfo = function() {
+        /*home.getMessageInfo = function() {
             //associate message.getByRoomId with currentRoom?
-        }
+        }*/
     }
 
     angular
