@@ -11,10 +11,10 @@
     <div class="messages-header">
         <h3> {{ home.currentRoom }} </h3>
     </div>
-    <div class="messages-body">
-      <div class="username"><p>username</p></div>
-      <div class="user-message"><p>message</p></div>
-      <div class="timestamp"><p>timestamp</p></div>
-      <div class="roomID"><p>roomID</p></div>
+    <div class="messages-body" ng-repeat="message in home.messages">
+      <div class="username">{{ message.username }}</div>
+      <div class="user-message">{{ message.user-message }}</div>
+      <div class="timestamp">{{ message.timestamp }}</div>
+      <div class="roomID">{{ message.roomID }}</div>
     </div>
 </div>
