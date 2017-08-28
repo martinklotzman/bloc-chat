@@ -3,7 +3,6 @@
         var home = this;
         home.rooms = Room.all;
         home.currentRoom = null;
-        home.messages = Message.all;
 
         home.addRoom = function() {
             console.log("opened");
@@ -18,12 +17,8 @@
         home.selectRoom = function(room) {
             console.log("selected");
             home.currentRoom = room.$value;
+            home.messages = Message.getByRoomId(home.currentRoom.$id);
       }
-
-        /*home.getMessageInfo = function() {
-            //associate message.getByRoomId with currentRoom?
-        }*/
-    }
 
     angular
         .module('blocChat')
