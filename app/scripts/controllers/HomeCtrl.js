@@ -19,6 +19,7 @@
             home.currentRoom = room.$value;
             home.messages = Message.getByRoomId(home.currentRoom.$id);
       }
+    }
 
     angular
         .module('blocChat')
