@@ -43,11 +43,6 @@ html,body { height:100%; }
 
 }
 
-.room-name {
-    padding-left: 10px;
-
-}
-
 /* Messages */
 
 .messages {
@@ -62,5 +57,38 @@ html,body { height:100%; }
 }
 
 .messages-body {
-    background-color: yellow;
+    width: 100%;
+    padding: 10px;
+    margin: 0px auto 10px auto;
+    position: relative;
+
+}
+
+.messages-body:nth-child(even) {
+    background-color: lightblue;
+}
+
+.messages-body:nth-child(odd) {
+    background-color: tan;
+}
+
+.messages-body .username {
+    font-weight: bold;
+
+}
+
+.messages-body .timestamp {
+
+    color: gray;
+    position: absolute;
+    top: 20px;
+    right: 20%;
+
+}
+
+.messages-body .usermessage {
+    font-style: italic;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: inline-block;
 }
