@@ -3,6 +3,7 @@
         var home = this;
         home.rooms = Room.all;
         home.currentRoom = null;
+        home.messages = Message.all;
 
         home.addRoom = function() {
             console.log("opened");
@@ -17,7 +18,7 @@
         home.selectRoom = function(room) {
             console.log("selected");
             home.currentRoom = room.$value;
-            home.messages = Message.getByRoomId(home.currentRoom.$id);
+            home.messages = Message.getByRoomId(room.$id);
       }
     }
 
