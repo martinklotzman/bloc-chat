@@ -1,8 +1,8 @@
 (function() {
     function LoginCtrl(BlocChatCookies, $uibModalInstance) {
-        var cookie = this;
+        var login = this;
 
-          cookie.setUsername = function() {
+          login.setUsername = function() {
             console.log("CookiesCtrl");
           // do something to set user name
         };

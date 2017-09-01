@@ -5,8 +5,8 @@
             $uibModal.open({
                 templateUrl: '/templates/login.html',
                 size: 'sm',
-                controller: 'CookiesCtrl',
-                controllerAs: 'cookie'
+                controller: 'LoginCtrl',
+                controllerAs: 'login'
             });
         }
     }
