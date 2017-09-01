@@ -6,7 +6,8 @@
                 templateUrl: '/templates/login.html',
                 size: 'sm',
                 controller: 'LoginCtrl',
-                controllerAs: 'login'
+                controllerAs: 'login',
+                backdrop: false
             });
         }
     }

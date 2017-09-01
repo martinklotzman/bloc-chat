@@ -1,15 +1,15 @@
 (function() {
-    function LoginCtrl(BlocChatCookies, $uibModalInstance) {
+    function LoginCtrl($cookies, $uibModalInstance) {
         var login = this;
 
           login.setUsername = function() {
-            console.log("CookiesCtrl");
-          // do something to set user name
+
+              $uibModalInstance.close()
         };
 
     }
 
     angular
         .module('blocChat')
-        .controller('LoginCtrl', ['BlocChatCookies', '$uibModalInstance', LoginCtrl]);
+        .controller('LoginCtrl', ['$cookies', '$uibModalInstance', LoginCtrl]);
 })();
