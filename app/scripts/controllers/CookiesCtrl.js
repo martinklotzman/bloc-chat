@@ -1,10 +1,10 @@
 (function() {
-    function ModalCtrl(Room, $uibModalInstance) {
+    function CookiesCtrl(BlocChatCookies, $uibModalInstance) {
         var cookie = this;
 
     }
 
     angular
         .module('blocChat')
-        .controller('CookiesCtrl', ['Room', '$uibModalInstance', CookiesCtrl]);
+        .controller('CookiesCtrl', ['BlocChatCookies', '$uibModalInstance', CookiesCtrl]);
 })();
