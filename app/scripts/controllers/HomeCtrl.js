@@ -19,6 +19,10 @@
             home.currentRoom = room.$value;
             home.messages = Message.getByRoomId(room.$id);
       }
+
+        home.sendMessage = function(newMessage) {
+            console.log(newMessage);
+      }
     }
 
     angular

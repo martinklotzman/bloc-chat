@@ -16,4 +16,8 @@
       <div class="timestamp">{{ message.timestamp | date: 'shortTime' }}</div>
       <div class="usermessage">{{ message.usermessage }}</div>
     </div>
+    <div class="messages-field">
+        <input class="message-field" type="text" style="width:65%" placeholder="Write your message here..." name="message" ng-model="home.name"></input>
+        <button class="btn-default" type="submit" ng-click="home.sendMessage(home.name)">Send</button>
+    </div>
 </div>
