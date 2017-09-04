@@ -12,6 +12,14 @@
         };
 
         Message.send = function(newMessage) {
+            //take message object as argument and submit to firebase
+            //send message... username & time?
+            //firebaseRef.set({Title: title, Content: post, Date: date});
+            var date = Date();
+            messages.$add({usermessage: newMessage, timestamp: date});
+
+            console.log(newMessage);
+            console.log(date);
 
         };
 

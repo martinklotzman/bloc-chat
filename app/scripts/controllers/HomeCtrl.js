@@ -1,8 +1,9 @@
 (function() {
-    function HomeCtrl(Room, $uibModal, Message) {
+    function HomeCtrl(Room, $uibModal, Message, $cookies) {
         var home = this;
         home.rooms = Room.all;
         home.currentRoom = null;
+
 
         home.addRoom = function() {
             console.log("opened");
@@ -21,11 +22,22 @@
       }
 
         home.sendMessage = function(newMessage) {
-            console.log(newMessage);
+            if(newMessage) {
+                //get username
+                //get roomID
+                //get message
+                home.username = $cookies.get('blocChatCurrentUser');
+                Message.send(newMessage);
+                console.log(home.username);
+            } else {
+                alert('Enter a message');
+            }
+
       }
+
     }
 
     angular
         .module('blocChat')
-        .controller('HomeCtrl', ['Room', '$uibModal', 'Message', HomeCtrl]);
+        .controller('HomeCtrl', ['Room', '$uibModal', 'Message', '$cookies', HomeCtrl]);
 })();
