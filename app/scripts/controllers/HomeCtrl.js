@@ -3,7 +3,8 @@
         var home = this;
         home.rooms = Room.all;
         home.currentRoom = null;
-        home.currentUser = $cookies.get('blocChatCurrentUser');
+        home.currentUser = $cookies.get('blocChatCurrentUser')
+        home.currentTime = new Date();
         home.newMessage = {};
 
         home.addRoom = function() {
@@ -17,18 +18,17 @@
         }
 
         home.selectRoom = function(room) {
-            console.log("selected");
+
             home.currentRoom = room.$value;
             home.messages = Message.getByRoomId(room.$id);
+            home.newMessage.roomID = room.$id;
       }
 
         home.sendMessage = function() {
-                //get username
-                //get roomID
-                //get message
+
                 home.newMessage.username = home.currentUser;
-                home.newMessage.roomID = home.currentRoom.$value;
-                //Message.send(home.newMessage);
+                home.newMessage.timestamp = new Date().getTime();
+                Message.send(home.newMessage);
                 console.log(home.newMessage);
 
       }
