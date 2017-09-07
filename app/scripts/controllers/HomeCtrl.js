@@ -27,7 +27,7 @@
         home.sendMessage = function() {
 
                 home.newMessage.username = home.currentUser;
-                home.newMessage.timestamp = new Date().getTime();
+                home.newMessage.timestamp = firebase.database.ServerValue.TIMESTAMP;
                 Message.send(home.newMessage);
                 console.log(home.newMessage);
 
