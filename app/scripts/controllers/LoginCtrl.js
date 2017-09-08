@@ -3,9 +3,10 @@
         var login = this;
 
           login.setUsername = function() {
-              if (login.name) {
-                  $cookies.put('blocChatCurrentUser', login.name);
+              if (login.username) {
                   var username = $cookies.get('blocChatCurrentUser');
+                  $cookies.put('blocChatCurrentUser', login.username);
+
                   console.log(username);
                   $uibModalInstance.close()
               } else {

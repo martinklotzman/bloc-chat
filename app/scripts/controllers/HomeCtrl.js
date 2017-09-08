@@ -4,7 +4,6 @@
         home.rooms = Room.all;
         home.currentRoom = null;
         home.currentUser = $cookies.get('blocChatCurrentUser')
-        home.currentTime = new Date();
         home.newMessage = {};
 
         home.addRoom = function() {
