@@ -4,11 +4,9 @@
 
           login.setUsername = function() {
               if (login.username) {
-                  var username = $cookies.get('blocChatCurrentUser');
                   $cookies.put('blocChatCurrentUser', login.username);
-
-                  console.log(username);
                   $uibModalInstance.close()
+                  window.location.reload(true);
               } else {
                 alert("Set a username");
               }

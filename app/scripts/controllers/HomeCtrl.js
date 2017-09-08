@@ -6,6 +6,7 @@
         home.currentUser = $cookies.get('blocChatCurrentUser')
         home.newMessage = {};
 
+
         home.addRoom = function() {
             console.log("opened");
             $uibModal.open({
